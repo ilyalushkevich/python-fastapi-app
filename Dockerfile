@@ -1,4 +1,4 @@
-FROM python:3.12-slim-bullseye
+FROM python:3.12-slim-bookworm
 
 ENV PATH="/opt/allure-2.34.1/bin:${PATH}"
 
