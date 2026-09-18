@@ -103,7 +103,11 @@ allure serve allure-results
 │   └── allure/          # Тесты с Allure-шагами
 ├── ci/
 │   └── allure/
-│       └── Dockerfile   # Nginx-образ для публикации Allure-отчёта
+│       ├── Dockerfile              # Nginx-образ для публикации Allure-отчёта
+│       └── Dockerfile.dockerignore # dockerignore для этой сборки (не даёт корневому .dockerignore исключить allure-report/)
 ├── Dockerfile
-└── requirements.txt
+├── pyproject.toml       # Конфиг pytest (testpaths, filterwarnings)
+├── requirements.txt
+├── .dockerignore
+└── .gitignore
 ```
