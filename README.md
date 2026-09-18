@@ -106,7 +106,7 @@ allure serve allure-results
 │       ├── Dockerfile              # Nginx-образ для публикации Allure-отчёта
 │       └── Dockerfile.dockerignore # dockerignore для этой сборки (не даёт корневому .dockerignore исключить allure-report/)
 ├── Dockerfile
-├── pyproject.toml       # Конфиг pytest (testpaths, filterwarnings)
+├── pyproject.toml       # Конфиг проекта (сейчас — только pytest: testpaths, filterwarnings)
 ├── requirements.txt
 ├── .dockerignore
 └── .gitignore
