@@ -4,8 +4,8 @@ REST API для управления коллекцией книг, постро
 
 ## Технологии
 
-- **Python 3.12**
-- **FastAPI 0.116** — веб-фреймворк
+- **Python 3.13**
+- **FastAPI 0.141** — веб-фреймворк
 - **Pydantic v2** — валидация данных
 - **Uvicorn** — ASGI-сервер
 - **pytest + allure-pytest** — тестирование и отчёты
@@ -16,6 +16,8 @@ REST API для управления коллекцией книг, постро
 ### Локально
 
 ```bash
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
 ```
