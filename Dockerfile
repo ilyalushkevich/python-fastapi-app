@@ -1,6 +1,6 @@
 FROM python:3.13-slim-bookworm
 
-ENV PATH="/opt/allure-2.46.1/bin:${PATH}"
+ENV PATH="/opt/allure-2.46.1/bin:/opt/venv/bin:${PATH}"
 
 WORKDIR /app
 
@@ -10,6 +10,8 @@ RUN apt-get update -yq \
     && apt-get install wget default-jdk --no-install-recommends -yq \
     && wget -O allure-2.46.1.tgz https://github.com/allure-framework/allure2/releases/download/2.46.1/allure-2.46.1.tgz \
     && tar -C /opt -xzvf allure-2.46.1.tgz
+
+RUN python3 -m venv /opt/venv
 
 RUN --mount=type=cache,dst=/root/.cache \
     python3 -m pip install --upgrade pip \
